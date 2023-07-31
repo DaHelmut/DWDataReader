@@ -1,0 +1,3 @@
+useDynLib(DWDataReader, .registration=TRUE)
+import(methods, Rcpp)
+exportPattern("^[[:alpha:]]+")
