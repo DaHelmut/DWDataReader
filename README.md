@@ -36,6 +36,7 @@ You can now get access to the data inside the file.
 `lib$getChannels()`
 
 `lib$getChannelReducedData("channelName",3)`
+
 `lib$getChannelData("channelName")`
 
 Please have a look at the file **test.R** in the **test** directory to have more informations about all the available methods.
