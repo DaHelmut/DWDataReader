@@ -8,7 +8,13 @@ With this package you can import reduced (Min, Max, Average, RMS) and fast data 
 Note : this version can only import simple analog / digital data (no matrix like available with FFT).
 
 ## Installation
-The easiest way to install it is to use RStudio along with devtools and Rcpp.
+### Prerequesites
++ R (>= 4.3.1)
++ Rcpp must be downloaded and installed.
++ devtools must be downloaded and installed.
++ [DEWESoft Data Reader Library](https://dewesoft.com/download/developer-downloads) (>= 4.2.0.24) must be downloaded and DLLs should be copied in the working directory. 
+  
+The easiest way to install it is to use **RStudio** along with devtools and Rcpp.
 
 `install.packages(devtools)`
 
@@ -28,8 +34,11 @@ To use the library, just create a new object as usual :
 
 Then open the file you want to access (an example file is available in the **test** directory) :
 
-`# Please take care of the extra \ in the filepath`
+`# Please take care of the extra '\' in the filepath`
+
 `lib$openFile("C:\\test.dxd")`
+
+**/!\ Be aware that you may need  to copy the DEWESoft Data Reader Library DLLs in the working directory to make it work.**
 
 You can now get access to the data inside the file.
 
@@ -46,4 +55,7 @@ You can have a better understanding of how the library works by defining the **`
 
 # Credits
 Thanks to [Rcpp package](https://cran.r-project.org/web/packages/Rcpp/index.html).
+
 Thanks to [Dirk Eddelbuettel](https://github.com/eddelbuettel) one of the creator / maintainer of the Rcpp package, who is very active on forums.
+
+Thanks to DEWESoft for sharing the [DEWESoft Data Reader Library](https://dewesoft.com/download/developer-downloads)
