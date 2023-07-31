@@ -1,6 +1,8 @@
 # DWDataReader
 R package to import data from [DEWESoft](https://dewesoft.com/) data files (DXD, DXZ extensions).
 
+![Screenshot of the package used in RStudio](/test/screenshot.png)
+
 ## Description
 This package is based on the  [DEWESoft Data Reader Library](https://dewesoft.com/download/developer-downloads).
 With this package you can import reduced (Min, Max, Average, RMS) and fast data from analog or digital channels.
