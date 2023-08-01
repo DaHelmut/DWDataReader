@@ -1,5 +1,5 @@
 # DWDataReader
-R package to import data from [DEWESoft](https://dewesoft.com/) data files (DXD, DXZ extensions).
+R package to import data from [DEWESoft](https://dewesoft.com/) data files (dxd, dxz extensions).
 
 ![Screenshot of the package used in RStudio](/test/screenshot.png)
 
@@ -15,7 +15,8 @@ Note : this version can only import simple analog / digital data (no matrix like
 + Rcpp must be downloaded and installed.
 + devtools must be downloaded and installed.
 + [DEWESoft Data Reader Library](https://dewesoft.com/download/developer-downloads) (>= 4.2.0.24) must be downloaded and DLLs should be copied in the working directory. 
-  
+
+### Procedure
 The easiest way to install it is to use **RStudio** along with devtools and Rcpp.
 
 `install.packages(devtools)`
@@ -40,7 +41,7 @@ Then open the file you want to access (an example file is available in the **tes
 
 `lib$openFile("C:\\test.dxd")`
 
-**/!\ Be aware that you may need  to copy the DEWESoft Data Reader Library DLLs in the working directory to make it work.**
+**/!\ Be aware that you may need to copy the DEWESoft Data Reader Library DLLs in the working directory to make it work.**
 
 You can now get access to the data inside the file.
 
@@ -50,7 +51,7 @@ You can now get access to the data inside the file.
 
 `lib$getChannelData("channelName")`
 
-Please have a look at the file **test.R** in the **test** directory to have more informations about all the available methods.
+Please have a look at the file **[test.R](/test/test.R)** in the **test** directory to have more informations about all the available methods.
 
 # Debug
 You can have a better understanding of how the library works by defining the **`SHOW_DEBUG_INF`** FLAG in **DWDataReader.hpp** in case of a crash or freeze.
