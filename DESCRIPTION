@@ -1,6 +1,6 @@
 Package: DWDataReader
 Type: Package
-Title: Importing Data from DEWESoft Data Files (*.dxd, *.dxz)
+Title: Importing Data From DEWESoft Data Files (*.dxd, *.dxz)
 Version: 1.0
 Date: 2023-07-26
 Author: Maxime MULLER
