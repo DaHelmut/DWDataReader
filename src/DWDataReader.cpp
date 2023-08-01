@@ -286,7 +286,7 @@ std::vector<std::pair<std::string, int> > DWDataReader::getChannelsNameAndIndex(
             free(this->channelList);
             this->channelList = NULL;
             
-            return std::vector<std::pair<std::string, int>>();
+            return std::vector<std::pair<std::string, int> >();
           }
           else
           {
@@ -311,11 +311,11 @@ std::vector<std::pair<std::string, int> > DWDataReader::getChannelsNameAndIndex(
       ERR(e.what());
       forward_exception_to_r(e);
       
-      return std::vector<std::pair<std::string, int>>();
+      return std::vector<std::pair<std::string, int> >();
     }
   }
   
-  return std::vector<std::pair<std::string, int>>();
+  return std::vector<std::pair<std::string, int> >();
 }
 
 int DWDataReader::findChannelIndexByName(const std::string& channelName)
@@ -326,17 +326,17 @@ int DWDataReader::findChannelIndexByName(const std::string& channelName)
   {
     try
     {
-      std::vector<std::pair<std::string,int>> listeVoiesAvecIndex;
+      std::vector<std::pair<std::string,int> > listeVoiesAvecIndex;
       
       listeVoiesAvecIndex = this->getChannelsNameAndIndex();
       
       if(!listeVoiesAvecIndex.empty())
       {
-        for(auto& voie:listeVoiesAvecIndex)
+        for(std::pair<std::string,int>& voie:listeVoiesAvecIndex)
         {
-          if(voie.first.compare(channelName)==0)
+          if(std::string(voie.first).compare(channelName)==0)
           {
-            return voie.second;
+            return int(voie.second);
           }
         }
       }
@@ -424,7 +424,7 @@ std::string DWDataReader::getChannelInfosEx(const std::string& channelName, cons
             }
             else
             {
-              boost::regex re{RegExp};
+              boost::regex re(RegExp);
               boost::smatch re_valeur;
               std::string re_str = std::string((char*)buffer);
               

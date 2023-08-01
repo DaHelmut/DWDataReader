@@ -1,3 +1,5 @@
+// [[Rcpp::depends(BH)]]
+
 #ifndef _DWDATAREADERLIB_
 #define _DWDATAREADERLIB_
 #include <Rcpp.h>
@@ -87,7 +89,7 @@ class DWDataReader
     double getChannelFrequency(const std::string& channelName);
     
   private:
-    std::vector<std::pair<std::string, int>> getChannelsNameAndIndex();
+    std::vector<std::pair<std::string, int> > getChannelsNameAndIndex();
     int findChannelIndexByName(const std::string& channelName);
     bool _getChannelData(const std::string& channelName, double * data, double * time_stamp);
     bool _getChannelReducedData(const std::string& channelName, double * data, double * time_stamp, REDUCED_DATA_TYPE reduced_type);
