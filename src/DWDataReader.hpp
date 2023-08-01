@@ -7,7 +7,7 @@
 #include <regex>
 #include <sstream>
 
-#include <boost/filesystem.hpp>
+// #include <boost/filesystem.hpp>
 #include <boost/regex.hpp>
 #include <boost/date_time/local_time/local_time.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
@@ -50,10 +50,15 @@ enum REDUCED_DATA_TYPE
   RMS_DATA = 4
 };
 
+
+//' @name DWDataReader
+//' @title DWDataReader library class
+//' @description Library to import data from DEWESoft data files (*.dxd, *.dxz)
 class DWDataReader
 {
   public:
     DWDataReader();
+    
     ~DWDataReader();
     
     bool loadDWLib();
@@ -98,6 +103,7 @@ class DWDataReader
     struct DWChannel * channelList = NULL;
 };
 
+RCPP_EXPOSED_CLASS(DWDataReader)
 RCPP_MODULE(DWDataReaderLib) {
   using namespace Rcpp;
   

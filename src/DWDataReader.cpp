@@ -1,5 +1,6 @@
 #include "DWDataReader.hpp"
 
+
 DWDataReader::DWDataReader()
 {
   DEBUG("Loading DWDataReader class (DWDataReader())");
@@ -37,6 +38,9 @@ DWDataReader::~DWDataReader()
   this->unloadDWLib();
 }
 
+//' @name loadDWLib
+//' @title Load the DEWESoft Data Reader Library
+//' @param None
 bool DWDataReader::loadDWLib()
 {
   DEBUG("Called DWDataReader::loadDWLib()");
@@ -85,15 +89,15 @@ bool DWDataReader::openFile(std::string filepath)
   
   if(this->isLoaded) 
   {
-    if (boost::filesystem::exists(filepath))
-    {
+    //if (boost::filesystem::exists(filepath))
+    //{
       if(DWOpenDataFile((char*)filepath.c_str(), &this->fileInfo) == DWSTAT_OK)
       {
         DEBUG("Opening DXD File OK");
         
         return true;
       }
-    }
+    
     
     ERR("DXD File doesn't exist");
     DEBUG("DXD File doesn't exist");

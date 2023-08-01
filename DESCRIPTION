@@ -1,11 +1,13 @@
 Package: DWDataReader
 Type: Package
-Title: Importing data from DEWESoft Data files (DXD, DXZ)
+Title: Importing Data from DEWESoft Data Files (*.dxd, *.dxz)
 Version: 1.0
 Date: 2023-07-26
 Author: Maxime MULLER
-Maintainer: Maxime MULLER <dahelmut@github.com>
-Description: Utility class to import data from DXD files. It can be used to retrieve useful informations from DXD files as well (start storing time, units, channels, etc).
+Maintainer: Maxime MULLER <maxime.muller57@gmail.com>
+Description: Utility class to import data from DEWESoft data files. It can be used to retrieve useful informations from files as well (start storing time, units, channels, etc).
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.11)
 LinkingTo: Rcpp
+RoxygenNote: 7.2.3
+Encoding: UTF-8
