@@ -49,8 +49,6 @@ You can now get access to the data inside the file.
 
 `lib$getChannelData("channelName")`
 
-Please have a look at the file **[test.R](/test/test.R)** in the **test** directory to have more informations about all the available methods.
-
 # Debug
 You can have a better understanding of how the library works by defining the **`SHOW_DEBUG_INF`** FLAG in **DWDataReader.hpp** in case of a crash or freeze.
 
